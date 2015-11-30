@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKS.Presenter.Model</RootNamespace>
+    <AssemblyName>MKS.Presenter.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Interface Presenter\CommandEventArgs.cs" />
+    <Compile Include="Interface Presenter\IOperations.cs" />
+    <Compile Include="Interface Presenter\IPresenter.cs" />
+    <Compile Include="Interface Presenter\IView.cs" />
+    <Compile Include="Interface Presenter\ViewData.cs" />
+    <Compile Include="Navigation.cs" />
+    <Compile Include="PresenterResources.Designer.cs">
+      <DependentUpon>PresenterResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\IUIButton.cs" />
+    <Compile Include="UI\IUICheck.cs" />
+    <Compile Include="UI\IUIDateInput.cs" />
+    <Compile Include="UI\IUIForm.cs" />
+    <Compile Include="UI\IUIGrid.cs" />
+    <Compile Include="UI\IUIInput.cs" />
+    <Compile Include="UI\IUILabel.cs" />
+    <Compile Include="UI\IUIMenu.cs" />
+    <Compile Include="UI\IUINumericInput.cs" />
+    <Compile Include="UI\IUIOnglet.cs" />
+    <Compile Include="UI\IUIOption.cs" />
+    <Compile Include="UI\IUITab.cs" />
+    <Compile Include="UI\UIBase.cs" />
+    <Compile Include="UI\UIObjects.cs" />
+    <Compile Include="UI\UIValidation.cs" />
+    <Compile Include="UI\UIValidations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MKS.Core.Model\MKS.Core.Model.csproj">
+      <Project>{40616318-3637-4058-af61-40ba3c38b329}</Project>
+      <Name>MKS.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKS.Core\MKS.Core\MKS.Core.csproj">
+      <Project>{20ef1de7-f9a8-4f64-a579-6352873399da}</Project>
+      <Name>MKS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKS.Library\MKS.Library\MKS.Library.csproj">
+      <Project>{e1d51e1e-9e39-4af4-81d0-3b807828db55}</Project>
+      <Name>MKS.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PresenterResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PresenterResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

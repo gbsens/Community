@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AUTHENTICATE_USER" xml:space="preserve">
+    <value>AuthenticatedUser</value>
+  </data>
+  <data name="AUTHENTIFICATION_TYPE" xml:space="preserve">
+    <value>AuthenticationType</value>
+  </data>
+  <data name="BYPASS_ROUTING" xml:space="preserve">
+    <value>ActivateByPassRouting</value>
+  </data>
+  <data name="CACHE_DURATION" xml:space="preserve">
+    <value>DefaultCacheDuration</value>
+  </data>
+  <data name="CACHING" xml:space="preserve">
+    <value>ActivateCaching</value>
+  </data>
+  <data name="DEBUG_MODE" xml:space="preserve">
+    <value>DebugMode</value>
+  </data>
+  <data name="DESIGN_BD_CONNECTION" xml:space="preserve">
+    <value>Vous avez identifié un classe de configuration avec une connexion à null</value>
+  </data>
+  <data name="ENVIRONNEMENT" xml:space="preserve">
+    <value>Environnement</value>
+  </data>
+  <data name="EX0001" xml:space="preserve">
+    <value>Votre devez overrider la méthode {0} dans votre classe de Mapping.</value>
+  </data>
+  <data name="EX0002" xml:space="preserve">
+    <value>Vous utilisez une validation personalisée sans avoir défini la validation à effectuer</value>
+  </data>
+  <data name="EX0003" xml:space="preserve">
+    <value>Aucun contrat n'est défini pour ce connecteur.</value>
+  </data>
+  <data name="EX0004" xml:space="preserve">
+    <value>Il n'y a aucun URL de défini ou d'actif pour les contrats dans les configurations.</value>
+  </data>
+  <data name="EX0005" xml:space="preserve">
+    <value>Les Urls des contrats suivants sont manquants :</value>
+  </data>
+  <data name="EX0006" xml:space="preserve">
+    <value>Vous devez spécifier un IRoutingUsage dans votre connecteur. Utilisez la méthode SetRouting pour y parvenir.</value>
+  </data>
+  <data name="EX0007" xml:space="preserve">
+    <value>Impossible de communiquer avec le service {0}.</value>
+  </data>
+  <data name="EX0008" xml:space="preserve">
+    <value>Code Système client inconnu</value>
+  </data>
+  <data name="EX0009" xml:space="preserve">
+    <value>Code Utilisateur client inconnu</value>
+  </data>
+  <data name="EX0010" xml:space="preserve">
+    <value>Code Machine client inconnu</value>
+  </data>
+  <data name="EX0011" xml:space="preserve">
+    <value>Code Système client : </value>
+  </data>
+  <data name="EX0012" xml:space="preserve">
+    <value>Code Usager client : </value>
+  </data>
+  <data name="EX0013" xml:space="preserve">
+    <value>Code Machine client : </value>
+  </data>
+  <data name="EX0014" xml:space="preserve">
+    <value>Impossible de trouver l'URI de l'élément {0} dans la balise "MKSServicesWCF" du fichier de configuration de l'application.</value>
+  </data>
+  <data name="EX0015" xml:space="preserve">
+    <value>L'URI de l'élément {0} dans la balise "MKSServicesWCF" du fichier de configuration de l'application est incorrect.</value>
+  </data>
+  <data name="EX0016" xml:space="preserve">
+    <value>Le paramètre d'entrée du proxy a la valeur Null.</value>
+  </data>
+  <data name="EX0017" xml:space="preserve">
+    <value>Impossible d'héberger le service demandé à l'adresse suivante : {0}</value>
+  </data>
+  <data name="EX0018" xml:space="preserve">
+    <value>Impossible d'appeler le service à l'adresse suivante {0}</value>
+  </data>
+  <data name="EX0019" xml:space="preserve">
+    <value>Un appel a été fait au service à l'adresse suivante : {0}</value>
+  </data>
+  <data name="EX0020" xml:space="preserve">
+    <value>Vous devez définir la clef &lt;add key="CodeSysteme" value="Insérez Le code de système ici"/&gt; dans la balise AppSettings de votre fichier de configuration</value>
+  </data>
+  <data name="EX0021" xml:space="preserve">
+    <value>Erreur lors de la validation. Soit l'objet à valider ne comporte pas la méthode ou la propriété testée, soit la valeur de la propriété est à Null.</value>
+  </data>
+  <data name="EX0022" xml:space="preserve">
+    <value>Impossible d'obtenir l'en-tête du message, vérifiez que votre service possède bien le Behavior de communication MKS.</value>
+  </data>
+  <data name="EX0023" xml:space="preserve">
+    <value>Erreur lors de la validation de type {0} sur la propriété {1} de l'objet {2}.</value>
+  </data>
+  <data name="EX0024" xml:space="preserve">
+    <value>Vous devez être dans un appel service pour avoir accès aux propriétés "Client".</value>
+  </data>
+  <data name="EX0025" xml:space="preserve">
+    <value>Erreur lors de la validation: L'objet à valider de type {0} est NULL.</value>
+  </data>
+  <data name="EX0026" xml:space="preserve">
+    <value>Vous devez être dans un appel service pour utiliser cette méthode.</value>
+  </data>
+  <data name="EX0027" xml:space="preserve">
+    <value>CallByName() : Nom de méthode ou de propriété inexistant ou Null : {0}</value>
+  </data>
+  <data name="EX0028" xml:space="preserve">
+    <value>Le délai de {0} secondes a expiré.</value>
+  </data>
+  <data name="EX0029" xml:space="preserve">
+    <value>Resource Type Does Not Have Property</value>
+  </data>
+  <data name="EX0030" xml:space="preserve">
+    <value>Resource Property is Not String Type</value>
+  </data>
+  <data name="EX0031" xml:space="preserve">
+    <value>Not a member access</value>
+  </data>
+  <data name="EX0032" xml:space="preserve">
+    <value>Not a lambda expression</value>
+  </data>
+  <data name="EX0033" xml:space="preserve">
+    <value>Not a method call</value>
+  </data>
+  <data name="IS_AUTHENTICATED" xml:space="preserve">
+    <value>IsAuthenticated</value>
+  </data>
+  <data name="MKSServicesWCF" xml:space="preserve">
+    <value>MKSServicesWCF</value>
+  </data>
+  <data name="SYSTEM_CODE" xml:space="preserve">
+    <value>ApplicationCode</value>
+  </data>
+  <data name="USER_CODE" xml:space="preserve">
+    <value>ApplicationUser</value>
+  </data>
+  <data name="VERSION_FRAMEWORK" xml:space="preserve">
+    <value>VersionFrameWork</value>
+  </data>
+  <data name="VERSION_SERVICE" xml:space="preserve">
+    <value>VersionService</value>
+  </data>
+</root>

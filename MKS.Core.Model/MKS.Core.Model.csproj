@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40616318-3637-4058-AF61-40BA3C38B329}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MKS.Core.Model</RootNamespace>
+    <AssemblyName>MKS.Core.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Error\ExceptionLog.cs" />
+    <Compile Include="Error\ExceptionProcess.cs" />
+    <Compile Include="Error\Severity.cs" />
+    <Compile Include="Error\ProcessResults.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Error\ReturnMessage.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="Error\TypeError.cs" />
+    <Compile Include="Activity\IActivity.cs" />
+    <Compile Include="Activity\IActivityLogAdapter.cs" />
+    <Compile Include="Activity\ISubActivity.cs" />
+    <Compile Include="Interface Core\IBusiness.cs" />
+    <Compile Include="Interface Core\IOperation.cs" />
+    <Compile Include="Interface Core\IUserEnvironment.cs" />
+    <Compile Include="Query\ExpressionQuery.cs" />
+    <Compile Include="Interface Core\IKey.cs" />
+    <Compile Include="Interface Core\ISearch.cs" />
+    <Compile Include="Ressources\CoreRessources.Designer.cs">
+      <DependentUpon>CoreRessources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Trace\ITrackingAdapter.cs" />
+    <Compile Include="Interface Core\Key.cs" />
+    <Compile Include="Interface Core\Search.cs" />
+    <Compile Include="Trace\Trace.cs" />
+    <Compile Include="ObjectBase\IReturnObject.cs" />
+    <Compile Include="ObjectBase\ParameterPagingVirtual.cs">
+      <SubType>
+      </SubType>
+    </Compile>
+    <Compile Include="ObjectBase\ReturnObject.cs" />
+    <Compile Include="Concurrency\ConcurrencyDefaultAdapter.cs" />
+    <Compile Include="Concurrency\IConcurrencyAdapter.cs" />
+    <Compile Include="Concurrency\ConcurrencyObject.cs" />
+    <Compile Include="Concurrency\ConcurrencyResult.cs" />
+    <Compile Include="Security\ApplicationAutorizations.cs" />
+    <Compile Include="Security\IApplicationAuthorization.cs" />
+    <Compile Include="Security\IPermission.cs" />
+    <Compile Include="Security\IPermissionAuthorization.cs" />
+    <Compile Include="Security\ISecurityPermission.cs" />
+    <Compile Include="Security\ISecurityAdapter.cs" />
+    <Compile Include="Security\SecurityAutorisations.cs" />
+    <Compile Include="Security\SecurityCRUDE.cs" />
+    <Compile Include="Security\SecurityInfo.cs" />
+    <Compile Include="Validation\Rules.cs" />
+    <Compile Include="Validation\IValidation.cs" />
+    <Compile Include="Validation\Rule.cs" />
+    <Compile Include="Validation\RuleResult.cs" />
+    <Compile Include="Validation\RuleResults.cs" />
+    <Compile Include="Validation\ValidationRule.cs" />
+    <Compile Include="Validation\ValidationRules.cs" />
+    <Compile Include="Validation\Validation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Ressources\CoreRessources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>CoreRessources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,157 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Core", "MKS.Core\MKS.Core\MKS.Core.csproj", "{20EF1DE7-F9A8-4F64-A579-6352873399DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAD1B59D-3072-4094-892A-9C6DD5561960}"
+	ProjectSection(SolutionItems) = preProject
+		Graph1.dgml = Graph1.dgml
+		SharedAssemblyInfo.cs = SharedAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Library", "MKS.Library\MKS.Library\MKS.Library.csproj", "{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Web", "MKS.Web\MKS.Web.csproj", "{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Core.Model", "MKS.Core.Model\MKS.Core.Model.csproj", "{40616318-3637-4058-AF61-40BA3C38B329}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B8EF7756-C563-451F-B65A-7B112D039A1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D29E12EC-841C-47A2-9480-14340177F749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Core.Presenter", "MKS.Core.Presentation\MKS.Core.Presenter.csproj", "{CAC768F4-E6B0-490F-9A10-B7943305ADC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Presenter.Model", "MKS.Presenter.Model\MKS.Presenter.Model.csproj", "{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Web.MVC", "MKS.Web.MVC\MKS.Web.MVC.csproj", "{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://gbsens.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MKS.Core\\MKS.Core\\MKS.Core.csproj
+		SccProjectTopLevelParentUniqueName1 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName1 = MKS.Core/MKS.Core
+		SccLocalPath1 = MKS.Core\\MKS.Core
+		SccProjectUniqueName2 = MKS.Library\\MKS.Library\\MKS.Library.csproj
+		SccProjectTopLevelParentUniqueName2 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName2 = MKS.Library/MKS.Library
+		SccLocalPath2 = MKS.Library\\MKS.Library
+		SccProjectUniqueName3 = MKS.Web\\MKS.Web.csproj
+		SccProjectTopLevelParentUniqueName3 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName3 = MKS.Web
+		SccLocalPath3 = MKS.Web
+		SccProjectUniqueName4 = MKS.Core.Model\\MKS.Core.Model.csproj
+		SccProjectTopLevelParentUniqueName4 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName4 = MKS.Core.Model
+		SccLocalPath4 = MKS.Core.Model
+		SccProjectUniqueName5 = MKS.Presenter.Model\\MKS.Presenter.Model.csproj
+		SccProjectTopLevelParentUniqueName5 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName5 = MKS.Presenter.Model
+		SccLocalPath5 = MKS.Presenter.Model
+		SccProjectUniqueName6 = MKS.Core.Presentation\\MKS.Core.Presenter.csproj
+		SccProjectTopLevelParentUniqueName6 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName6 = MKS.Core.Presentation
+		SccLocalPath6 = MKS.Core.Presentation
+		SccProjectUniqueName7 = MKS.Web.MVC\\MKS.Web.MVC.csproj
+		SccProjectTopLevelParentUniqueName7 = MKS.Framework.Presenter3.0.0.sln
+		SccProjectName7 = MKS.Web.MVC
+		SccLocalPath7 = MKS.Web.MVC
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		ReleaseX64|Any CPU = ReleaseX64|Any CPU
+		ReleaseX64|x64 = ReleaseX64|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.Release|x64.ActiveCfg = Release|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.Release|x64.ActiveCfg = Release|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.ReleaseX64|Any CPU.ActiveCfg = ReleaseX64|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.ReleaseX64|Any CPU.Build.0 = ReleaseX64|Any CPU
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55}.ReleaseX64|x64.ActiveCfg = ReleaseX64|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.Release|x64.ActiveCfg = Release|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.Release|x64.ActiveCfg = Release|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
+		{40616318-3637-4058-AF61-40BA3C38B329}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.Release|x64.ActiveCfg = Release|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.Release|x64.ActiveCfg = Release|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Release|x64.ActiveCfg = Release|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{20EF1DE7-F9A8-4F64-A579-6352873399DA} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{BAD1B59D-3072-4094-892A-9C6DD5561960} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{E1D51E1E-9E39-4AF4-81D0-3B807828DB55} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{30BD32C9-5C39-4DB9-A763-FA7BFCF9DA21} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{40616318-3637-4058-AF61-40BA3C38B329} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{CAC768F4-E6B0-490F-9A10-B7943305ADC6} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
+	EndGlobalSection
+	GlobalSection(NDepend) = preSolution
+		Project = ".\MKS.Framework.ndproj"
+	EndGlobalSection
+EndGlobal
