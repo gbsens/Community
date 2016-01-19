@@ -34,12 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MKS.Core.Presenter">
-      <HintPath>..\ACME.CRM.Presenter\bin\Release\MKS.Core.Presenter.dll</HintPath>
-    </Reference>
-    <Reference Include="MKS.Presenter.Model">
-      <HintPath>..\ACME.CRM.Presenter\bin\Release\MKS.Presenter.Model.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -56,17 +50,25 @@
     <Compile Include="Controller.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MKS.Core\MKS.Core\MKS.Core.csproj">
-      <Project>{20ef1de7-f9a8-4f64-a579-6352873399da}</Project>
-      <Name>MKS.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MKS.Core.Model\MKS.Core.Model.csproj">
       <Project>{40616318-3637-4058-af61-40ba3c38b329}</Project>
       <Name>MKS.Core.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MKS.Core.Presentation\MKS.Core.Presenter.csproj">
+      <Project>{cac768f4-e6b0-490f-9a10-b7943305adc6}</Project>
+      <Name>MKS.Core.Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKS.Core\MKS.Core\MKS.Core.csproj">
+      <Project>{20ef1de7-f9a8-4f64-a579-6352873399da}</Project>
+      <Name>MKS.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MKS.Library\MKS.Library\MKS.Library.csproj">
       <Project>{e1d51e1e-9e39-4af4-81d0-3b807828db55}</Project>
       <Name>MKS.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKS.Presenter.Model\MKS.Presenter.Model.csproj">
+      <Project>{93687e92-5e3a-4d76-9564-d3aee83e0f8d}</Project>
+      <Name>MKS.Presenter.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\MKS.Web\MKS.Web.csproj">
       <Project>{30bd32c9-5c39-4db9-a763-fa7bfcf9da21}</Project>

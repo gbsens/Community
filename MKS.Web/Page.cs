@@ -27,34 +27,55 @@ namespace MKS.Web.MVP
         #region IViewBase
 
         public event CommandAction OnCommand;
-        
-       
+
+
+        /// <summary>
+        /// NOT RELEASE
+        /// </summary>
+        public virtual UIActivityLogs ActivityLogs
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
       
 
-        public virtual void Navigate(string routeKey, params object[] param)
+        public virtual void Navigate(string routeKey, Dictionary<string,object> param)
         {
             if (Navigation.Form.ContainsKey(routeKey))
             {
                 string url = (string)Navigation.Form[routeKey];
 
-                if (param != null && param.Length > 0)
+                if (param != null)
                 {
                     var sb = new StringBuilder();
                     sb.Append("?");
-                    for (int i = 0; i < param.Length; i = i + 2)
+
+                    foreach (var item in param)
                     {
-                        sb.AppendFormat("{0}={1}", param[i], param[i + 1]);
-                        if (i < param.Length - 2)
-                            sb.Append("&");
+                        if (item.Value is IView)
+                        {
+                            sb.AppendFormat("{0}={1}", item.Key, item.Value.ToString());
+                        }
+                        else
+                        {
+                            sb.AppendFormat("{0}={1}", item.Key, item.Value);
+                        }
+                        
                     }
-                    vb.GoForm = new Tuple<string, object[]>(url + sb, null);
+                    vb.GoForm = new Tuple<string, Dictionary<string, object>>(url + sb, param);
 
                     //RedirectLocation(Localizations.Form[routeKey] + sb);
                     Response.Redirect(Navigation.Form[routeKey] as string + sb);
                 }
                 else
                 {
-                    vb.GoForm = new Tuple<string, object[]>(url, null);
+                    vb.GoForm = new Tuple<string, Dictionary<string, object>>(url, null);
 
                     //RedirectLocation(Localizations.Form[routeKey]);
                     Response.Redirect(Navigation.Form[routeKey] as string);
@@ -62,7 +83,7 @@ namespace MKS.Web.MVP
             }
             else
             {
-                vb.GoForm = new Tuple<string, object[]>(routeKey, param);
+                vb.GoForm = new Tuple<string, Dictionary<string, object>>(routeKey, param);
             }
         }
 
@@ -127,6 +148,7 @@ namespace MKS.Web.MVP
             vb.ReservationMessages=processResults;
         }
 
-  
+
+
     }
 }

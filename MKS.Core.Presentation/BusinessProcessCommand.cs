@@ -28,10 +28,13 @@ namespace MKS.Core.Presenter
         public override Process DoBusinessProcess(RuleBusiness rule, BusinessObjectExecute<ObjectProcess<TView>> businessObject)
         {
 
+            
+
             IOperation<TView> p = businessObject.Parameter.GetProcess;
 
             switch (rule.CodeMessage)
             {
+
                 case "ERR_CMD_ACTION":
                     try
                     {

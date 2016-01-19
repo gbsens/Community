@@ -52,10 +52,13 @@
     <Compile Include="BusinessPresenter.cs" />
     <Compile Include="BusinessProcessPresenter.cs" />
     <Compile Include="BusinessProcessCommand.cs" />
+    <Compile Include="Journalisation.cs" />
+    <Compile Include="JournalisationAdapter.cs" />
     <Compile Include="ObjectPresenter.cs" />
     <Compile Include="ObjectProcess.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Process.cs" />
+    <Compile Include="ValidationView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MKS.Core.Model\MKS.Core.Model.csproj">

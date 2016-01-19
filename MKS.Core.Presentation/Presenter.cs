@@ -36,10 +36,10 @@ namespace MKS.Core.Presenter
         {
 
             _businessPresenter = new BusinessPresenter<TView, TProcess>(initialisation);
-
+            
             ObjectPresenter<TView> obj = new ObjectPresenter<TView>(_view,this);
 
-
+            
 
             _businessPresenter.Execute(obj);
             _process = obj.Process ;

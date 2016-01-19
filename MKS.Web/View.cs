@@ -25,13 +25,26 @@ namespace MKS.Web
         #region IViewBase
 
         public event CommandAction OnCommand;
-        
-       
-      
 
-        public virtual void Navigate(string routeKey, params object[] param)
+
+        /// <summary>
+        /// NOTE RELEASE
+        /// </summary>
+        public UIActivityLogs ActivityLogs
         {
-           vb.GoForm = new Tuple<string, object[]>(routeKey, param);           
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+        public virtual void Navigate(string routeKey, Dictionary<string,object> param)
+        {
+            vb.GoForm = new Tuple<string, Dictionary<string, object>>(routeKey, param);           
         }
 
         public virtual void SaveSession(string key, object sessionObject)
@@ -94,6 +107,8 @@ namespace MKS.Web
         {
             vb.ReservationMessages=processResults;
         }
+
+
 
     }
 }

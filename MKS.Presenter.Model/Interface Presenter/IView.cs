@@ -21,10 +21,13 @@ namespace MKS.Core.Presenter.Interfaces
         //Pour l'assignation des validations de contexte sur la vue 
         UIValidations Validations { get; set; }
 
+        //Pour l'assignation de la journalisation
+        UIActivityLogs ActivityLogs { get; set; }
+
         //permet à l'interface d'envoyer démarrer les opérations dans les processus de vue. Exemple : une commande sur un action d'un boutton dans une interface.
         event CommandAction OnCommand;
 
-        void Navigate(string routeKey, params object[] param);
+        void Navigate(string routeKey, Dictionary<string, object> param);
         void SaveSession(string key, object sessionObject);
         object GetSession(string key);
         void HideMessage();

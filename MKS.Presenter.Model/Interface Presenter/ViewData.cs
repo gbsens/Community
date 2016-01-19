@@ -40,7 +40,10 @@ namespace MKS.Core.Presenter
         /// </summary>
         public ProcessResults ReservationMessages { get; set; }
 
+
         public UIValidations Validations { get; set; }
+        
+        public UIActivityLogs ActivityLogs { get; set; }
 
         /// <summary>
         ///     Permet de controler les propriete d'une vue pour l'interface au niveau de la securité.
@@ -58,7 +61,7 @@ namespace MKS.Core.Presenter
         public List<Tuple<bool, PropertyDisplay, string>> ControlEnabled { get; set; }
 
         public Dictionary<string, string> SystemStatus { get; set; }
-        public Tuple<string, object[]> GoForm { get; set; }
+        public Tuple<string, Dictionary<string, object>> GoForm { get; set; }
         public Tuple<string, object> Session { get; set; }
         public Tuple<string, object> ApplicationSession { get; set; }
         public bool ClearMessages { get; set; }

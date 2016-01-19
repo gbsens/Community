@@ -70,6 +70,8 @@
     <Compile Include="UI\IUIOnglet.cs" />
     <Compile Include="UI\IUIOption.cs" />
     <Compile Include="UI\IUITab.cs" />
+    <Compile Include="UI\UIActivityLog.cs" />
+    <Compile Include="UI\UIActivityLogs.cs" />
     <Compile Include="UI\UIBase.cs" />
     <Compile Include="UI\UIObjects.cs" />
     <Compile Include="UI\UIValidation.cs" />
