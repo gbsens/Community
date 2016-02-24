@@ -55,10 +55,14 @@
     <Compile Include="..\SharedAssemblyInfo.cs">
       <Link>Properties\SharedAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Controller_REST.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="JsonUtility.cs" />
     <Compile Include="Page.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Parameters.cs" />
     <Compile Include="View.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +77,10 @@
     <ProjectReference Include="..\MKS.Core\MKS.Core\MKS.Core.csproj">
       <Project>{20ef1de7-f9a8-4f64-a579-6352873399da}</Project>
       <Name>MKS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKS.Library\MKS.Library\MKS.Library.csproj">
+      <Project>{e1d51e1e-9e39-4af4-81d0-3b807828db55}</Project>
+      <Name>MKS.Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\MKS.Presenter.Model\MKS.Presenter.Model.csproj">
       <Project>{93687e92-5e3a-4d76-9564-d3aee83e0f8d}</Project>

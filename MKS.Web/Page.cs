@@ -36,11 +36,11 @@ namespace MKS.Web.MVP
         {
             get
             {
-                throw new NotImplementedException();
+                return null;
             }
             set
             {
-                throw new NotImplementedException();
+                
             }
         }
       

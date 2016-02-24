@@ -15,6 +15,7 @@ namespace MKS.Core.Presenter.UI
         public IValidation<TObject> Validations { get; set; }
         public string ViewPropertyName { get; set; }
         public string ViewName { get; set; }
+        public ValidationRules ValidationRules{ get; set; }
 
         public RuleResults Validate(TObject objectInstance)
         {
@@ -53,16 +54,20 @@ namespace MKS.Core.Presenter.UI
         {
             //Validations = validation;
             Validations = new TValidation();
-
             ObjectPropertyName = Reflect<TObject>.GetName(property);
-            foreach (var item in Validations.GetRules())
-            {
-                ViewName = typeof (TView).Name;
-                //item.BindingPropertyName = Reflect<TView>.GetName(propertyView);  
-                //string p = ViewPropertyName.Substring(propertyView.Body.ToString().IndexOf("."), propertyView.Body.ToString().Length - 1);
-                //p = p.Substring(1, p.Length - 1);
-                ViewPropertyName = propertyView.Body.ToString();
-            }
+            ViewName = typeof(TView).Name;
+            ViewPropertyName = propertyView.Body.ToString();
+            ValidationRules =  Validations.GetRules();
+
+            //foreach (var item in Validations.GetRules())
+            //{
+            //    ViewName = typeof (TView).Name;
+            //    //item.BindingPropertyName = Reflect<TView>.GetName(propertyView);  
+            //    //string p = ViewPropertyName.Substring(propertyView.Body.ToString().IndexOf("."), propertyView.Body.ToString().Length - 1);
+            //    //p = p.Substring(1, p.Length - 1);
+            //    ViewPropertyName = propertyView.Body.ToString();
+                
+            //}
         }
     }
 }

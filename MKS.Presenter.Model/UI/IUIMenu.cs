@@ -8,6 +8,6 @@ namespace MKS.Core.Presenter.UI
         string Command { get; set; }
         string Text { get; set; }
         Uri Url { get; set; }
-        List<IUIMenu> Menus { get; set; }
+        List<Menu> Menus { get; set; }
     }
 }

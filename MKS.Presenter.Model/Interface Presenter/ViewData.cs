@@ -58,7 +58,7 @@ namespace MKS.Core.Presenter
         /// <summary>
         ///     Permet de controler les proprietes d'un objet pour l'interface.
         /// </summary>
-        public List<Tuple<bool, PropertyDisplay, string>> ControlEnabled { get; set; }
+        //public List<Tuple<bool, PropertyDisplay, string>> ControlEnabled { get; set; }
 
         public Dictionary<string, string> SystemStatus { get; set; }
         public Tuple<string, Dictionary<string, object>> GoForm { get; set; }

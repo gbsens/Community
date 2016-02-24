@@ -3,6 +3,6 @@
     public interface IUIInput : IUIBase
     {
         string Text { get; set; }
-        IUILabel Label { get; set; }
+        Label Label { get; set; }
     }
 }

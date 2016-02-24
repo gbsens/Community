@@ -2,7 +2,7 @@
 {
     public interface IUICheck : IUIBase
     {
-        IUILabel Texte { get; set; }
+        Label Texte { get; set; }
         Select Selection { get; set; }
     }
 }

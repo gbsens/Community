@@ -2,7 +2,7 @@
 {
     public interface IUITab<TView> : IUIBase where TView : IUIForm
     {
-        IUILabel Title { get; set; }
+        Label Title { get; set; }
         TView View { get; set; }
     }
 }

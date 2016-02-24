@@ -1,4 +1,5 @@
 ﻿using MKS.Core.Security;
+using System.Collections.Generic;
 
 namespace MKS.Core.Presenter.UI
 {
@@ -9,7 +10,8 @@ namespace MKS.Core.Presenter.UI
         string Tips { get; set; }
         bool Visible { get; set; }
         UIVAlidation UIValidations { get; set; }
-        Permission Permission { get; set; }
+        List<Permission> Permissions { get; set; }
+        
     }
 
     //public interface IUIBase<TViewBase>:IUIBase

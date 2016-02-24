@@ -19,6 +19,7 @@ namespace MKS.Web
             vb.Validations = new UIValidations();
         }
         private ViewData vb = new ViewData();
+        
 
         public ViewData ViewLogics { get { return vb; } }
 
@@ -34,11 +35,11 @@ namespace MKS.Web
         {
             get
             {
-                throw new NotImplementedException();
+                return null;
             }
             set
             {
-                throw new NotImplementedException();
+                
             }
         }
 

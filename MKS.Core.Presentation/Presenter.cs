@@ -26,6 +26,8 @@ namespace MKS.Core.Presenter
 
         BusinessPresenter<TView, TProcess> _businessPresenter;
 
+        public Presenter() { } // pour le controler REST
+
         public Presenter(TView view)
         {
             _view = view;
@@ -90,7 +92,7 @@ namespace MKS.Core.Presenter
 
                 var genericMethod = method.MakeGenericMethod(itemObject.GetType());
                 var parameters = new[] { itemObject };
-                var r = (RuleResults)genericMethod.Invoke(_view.Validations, parameters);
+                var r = (RuleResults)genericMethod.Invoke(_view.ViewLogics.Validations, parameters);
                 result.Add(r);
             }
             if (!string.IsNullOrEmpty(successMessage))

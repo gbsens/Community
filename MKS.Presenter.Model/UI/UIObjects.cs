@@ -22,7 +22,7 @@ namespace MKS.Core.Presenter.UI
 
         public UIBase()
         {
-            Permission = null;
+            Permissions = null;
         }
 
         public bool Enabled
@@ -41,18 +41,30 @@ namespace MKS.Core.Presenter.UI
             set { _visible = value; }
         }
 
-        public Permission Permission { get; set; }
+        public List<Permission> Permissions { get; set; }
+
+
     }
 
     public class Menu : UIBase, IUIMenu
     {
-        private List<IUIMenu> _menus = new List<IUIMenu>();
+        private List<Menu> _menus = new List<Menu>();
 
         public Menu()
         {
             Url = null;
         }
-
+        public List<Menu> Value
+        {
+            get
+            {
+                return Menus;
+            }
+            set
+            {
+                Menus = value;
+            }
+        }
         public Menu(string text, string command)
         {
             Url = null;
@@ -64,7 +76,7 @@ namespace MKS.Core.Presenter.UI
 
         public Uri Url { get; set; }
 
-        public List<IUIMenu> Menus
+        public List<Menu> Menus
         {
             get { return _menus; }
             set { _menus = value; }
@@ -75,28 +87,85 @@ namespace MKS.Core.Presenter.UI
 
     public class Option : UIBase, IUIOption
     {
-        private IUILabel _Titre = new Label();
+        private Label _Titre = new Label();
 
-        public IUILabel Texte
+        public Label Texte
         {
             get { return _Titre; }
             set { _Titre = value; }
         }
+        public bool Value
+        {
+            get
+            {
+                switch (Selection)
+                {
+                    case Select.Selected:
+                        return true;
+                        break;
+                    case Select.Unselect:
+                        return false;
+                        break;
+                    case Select.Bolt:
+                        return true;
+                        break;
+                    default:
+                        return false;
+                        break;
+                }
+            }
+            set
+            {
+                if (value == true)
+                    Selection = Select.Selected;
+                else
+                    Selection = Select.Unselect;
+            }
 
+        }
         public Select Selection { get; set; }
     }
 
     public class CheckBox : UIBase, IUICheck
     {
         private bool _enabled = true;
-        private IUILabel _Titre = new Label();
+        private Label _Titre = new Label();
 
-        public IUILabel Texte
+        public Label Texte
         {
             get { return _Titre; }
             set { _Titre = value; }
         }
+        public bool Value
+        {
+            get
+            {
+                switch (Selection)
+                {
+                    case Select.Selected:
+                        return true;
+                        break;
+                    case Select.Unselect:
+                        return false;
+                        break;
+                    case Select.Bolt:
+                        return true;
+                        break;
+                    default:
+                        return false;
+                        break;
+                }
+                
+            }
+            set
+            {
+                if (value == true)
+                    Selection = Select.Selected;
+                else
+                    Selection = Select.Unselect;
+            }
 
+        }
         public Select Selection { get; set; }
 
         public bool Enabled
@@ -115,14 +184,24 @@ namespace MKS.Core.Presenter.UI
         {
             Text = value;
         }
-        public Input(string text, IUILabel label)
+        public Input(string text, Label label)
         {
             Text = text;
             Label = label;
         }
-
+        public string Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text=value;
+            }
+        }
         public string Text { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
 
     public class NumericInput : UIBase, IUINumericInput
@@ -134,14 +213,24 @@ namespace MKS.Core.Presenter.UI
         {
             Text = value;
         }
-        public NumericInput(int value, IUILabel label)
+        public NumericInput(int value, Label label)
         {
             Text = value;
             Label = label;
         }
-
+        public int Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text = value;
+            }
+        }
         public int Text { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
     public class NumericInputLong : UIBase, IUINumericInputLong
     {
@@ -152,14 +241,24 @@ namespace MKS.Core.Presenter.UI
         {
             Text = value;
         }
-        public NumericInputLong(long value, IUILabel label)
+        public NumericInputLong(long value, Label label)
         {
             Text = value;
             Label = label;
         }
-
+        public long Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text = value;
+            }
+        }
         public long Text { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
     public class NumericInputFloat : UIBase, IUINumericInputFloat
     {
@@ -170,14 +269,24 @@ namespace MKS.Core.Presenter.UI
         {
             Text = value;
         }
-        public NumericInputFloat(float value, IUILabel label)
+        public NumericInputFloat(float value, Label label)
         {
             Text = value;
             Label = label;
         }
-
+        public float Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text = value;
+            }
+        }
         public float Text { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
     public class NumericInputDecimal : UIBase, IUINumericInputDecimal
     {
@@ -188,14 +297,24 @@ namespace MKS.Core.Presenter.UI
         {
             Text = value;
         }
-        public NumericInputDecimal(decimal value, IUILabel label)
+        public NumericInputDecimal(decimal value, Label label)
         {
             Text = value;
             Label = label;
         }
-
+        public decimal Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text = value;
+            }
+        }
         public decimal Text { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
     public class NumericInputDouble : UIBase, IUINumericInputDouble
     {
@@ -206,14 +325,24 @@ namespace MKS.Core.Presenter.UI
         {
             Text = value;
         }
-        public NumericInputDouble(double value, IUILabel label)
+        public NumericInputDouble(double value, Label label)
         {
             Text = value;
             Label = label;
         }
-
+        public double Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text = value;
+            }
+        }
         public double Text { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
 
     public class DateInput : UIBase, IUIDateInput
@@ -225,14 +354,24 @@ namespace MKS.Core.Presenter.UI
         {
             Date = date;
         }
-        public DateInput(DateTime date, IUILabel label)
+        public DateInput(DateTime date, Label label)
         {
             Date = date;
             Label = label;
         }
-
+        public DateTime Value
+        {
+            get
+            {
+                return Date;
+            }
+            set
+            {
+                Date = value;
+            }
+        }
         public DateTime Date { get; set; }
-        public IUILabel Label { get; set; }
+        public Label Label { get; set; }
     }
 
     public class Label : UIBase, IUILabel
@@ -245,7 +384,17 @@ namespace MKS.Core.Presenter.UI
         {
             Text = text;
         }
-
+        public string Value
+        {
+            get
+            {
+                return Text;
+            }
+            set
+            {
+                Text = value;
+            }
+        }
         public string Text { get; set; }
     }
 
@@ -259,7 +408,17 @@ namespace MKS.Core.Presenter.UI
         {
             Text = text;
         }
-
+        public string Value
+        {
+            get
+            {
+                return Command;
+            }
+            set
+            {
+                Command = value;
+            }
+        }
         public string Text { get; set; }
 
         public string Command { get; set; }
@@ -267,10 +426,10 @@ namespace MKS.Core.Presenter.UI
 
     public class Tab<TView> : UIBase, IUITab<TView> where TView : IUIForm
     {
-        private IUILabel _Titre { get; set; }
+        private Label _Titre { get; set; }
         private TView Body { get; set; }
 
-        public IUILabel Title
+        public Label Title
         {
             get { return _Titre; }
             set { _Titre = value; }
@@ -280,6 +439,17 @@ namespace MKS.Core.Presenter.UI
         {
             get { return Body; }
             set { Body = value; }
+        }
+        public TView Value
+        {
+            get
+            {
+                return View;
+            }
+            set
+            {
+                View = value;
+            }
         }
     }
 

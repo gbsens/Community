@@ -8,6 +8,6 @@ namespace MKS.Core.Presenter.UI
 
     public interface IUIOngletDynamic<TView> where TView : IUIForm
     {
-        List<IUITab<TView>> Tabs { get; set; }
+        List<Tab<TView>> Tabs { get; set; }
     }
 }
