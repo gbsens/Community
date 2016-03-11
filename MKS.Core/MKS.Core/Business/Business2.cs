@@ -28,61 +28,89 @@ namespace MKS.Core.Business
 
         }
         #region Set
-        public void SetTracking<TTrackingAdapter>() where TTrackingAdapter : ITrackingAdapter, new()
-        {
-            business.SetTracking(new TTrackingAdapter());
-        }
 
+
+        public void SetDataMap(IDataOperations<TObject, TKey> mappingInstance)
+        {
+            business.SetDataMap(mappingInstance);
+        }
         public new void SetDataMap<Mapping>() where Mapping : IDataOperations<TObject, TKey>, new()
         {
             business.SetDataMap(new Mapping());
         }
 
+        public void SetActivityLog( IActivityLogOperations<TObject, TKey> activityLogInstance, IActivityAdapter activityAdapterInstance)
+        {
+            business.SetEventLog(activityLogInstance, activityAdapterInstance);
+        }
         public new void SetActivityLog<EventLog>() where EventLog : IActivityLogOperations<TObject, TKey>, IActivityAdapter, new()
         {
             business.SetEventLog(new EventLog(), new EventLog());
         }
-
         public new void SetActivityLog<EventLog>(IActivity activityInstance) where EventLog : IActivityLogOperations<TObject, TKey>, IActivityAdapter, new()
         {
             business.SetEventLog(new EventLog(), new EventLog(), activityInstance);
         }
-
+        public void SetConcurrency(IConcurrencyOperations<TObject, TKey> concurrencyInstance)
+        {
+            business.SetConcurrency(concurrencyInstance);
+        }
         public new void SetConcurrency<Concurrency>() where Concurrency : IConcurrencyOperations<TObject, TKey>, new()
         {
             business.SetConcurrency(new Concurrency());
         }
-
+        public void SetValidationKey(IValidation<TKey> validationInstance)
+        {
+            business.SetValidationKey(validationInstance);
+        }
         public void SetValidationKey<Validation>() where Validation : IValidation<TKey>, new()
         {
             business.SetValidationKey(new Validation());
         }
-
+        public void SetPreProcessSelectWithKey(BusinessProcessSelect<TObject, TKey> businessProcessInstance)
+        {
+            business.SetPreProcessSelectKey<TObject, TKey>(businessProcessInstance);
+        }
         public void SetPreProcessSelectWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new()
         {
             business.SetPreProcessSelectKey<TObject, TKey>(new BusinessProcess());
         }
-
+        public void SetPostProcessSelectWithKey(BusinessProcessSelect<TObject, TKey> businessProcessInstance)
+        {
+            business.SetPostProcessSelectKey(businessProcessInstance);
+        }
         public void SetPostProcessSelectWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new()
         {
             business.SetPostProcessSelectKey(new BusinessProcess());
         }
-
+        public void SetPreProcessDeleteWithKey( BusinessProcessDelete<TObject, TKey> businessProcessDeleteInstance)
+        {
+            business.SetPreProcessDeleteKey(businessProcessDeleteInstance);
+        }
         public void SetPreProcessDeleteWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TKey>, new()
         {
             business.SetPreProcessDeleteKey(new BusinessProcess());
         }
-
+        public void SetPostProcessDeleteWithKey(BusinessProcessDelete<TObject, TKey> businessProcessDelete)
+        {
+            business.SetPostProcessDeleteKey(businessProcessDelete);
+        }
         public void SetPostProcessDeleteWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TKey>, new()
         {
             business.SetPostProcessDeleteKey(new BusinessProcess());
         }
-
-        public void SePreProcessWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new()
+        public void SetPreProcessWithKey(BusinessProcessSelect<TObject, TKey> businessProcessSelect)
+        {
+            business.SetPreProcessEditKey(businessProcessSelect);
+        }
+        public void SetPreProcessWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new()
         {
             business.SetPreProcessEditKey(new BusinessProcess());
         }
-
+        public void SetPostProcessEditWithKey( BusinessProcessSelect<TObject, TKey> businessProcessInstance)
+        {
+            business.SetPostProcessEditKey(businessProcessInstance);
+        }
         public void SetPostProcessEditWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new()
         {
             business.SetPostProcessEditKey(new BusinessProcess());

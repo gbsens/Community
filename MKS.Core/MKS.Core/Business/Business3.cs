@@ -30,16 +30,19 @@ namespace MKS.Core.Business
         }
         #region Set
 
-        public void SetTracking<TTrackingAdapter>() where TTrackingAdapter : ITrackingAdapter, new()
-        {
-            business.SetTracking(new TTrackingAdapter());
-        }
 
+        public void SetDataMap(IDataOperations<TObject, TResult, TSearch> mappingInstance)
+        {
+            business.SetDataMap(mappingInstance);
+        }
         public new void SetDataMap<Mapping>() where Mapping : IDataOperations<TObject, TResult, TSearch>, new()
         {
             business.SetDataMap(new Mapping());
         }
-
+        public void SetActivityLog( IActivityLogOperations<TObject, TResult, TSearch> activityLogInstance,IActivityAdapter activityAdapterInstance )
+        {
+            business.SetEventLog(activityLogInstance, activityAdapterInstance);
+        }
         public new void SetActivityLog<EventLog>() where EventLog : IActivityLogOperations<TObject, TResult, TSearch>, IActivityAdapter, new()
         {
             business.SetEventLog(new EventLog(), new EventLog());
@@ -50,41 +53,69 @@ namespace MKS.Core.Business
             business.SetEventLog(new EventLog(), new EventLog(), activityInstance);
         }
 
+        public void SetConcurrency(IConcurrencyOperations<TObject, TResult, TSearch> concurrencyOperatorInstance)
+        {
+            business.SetConcurrency(concurrencyOperatorInstance);
+        }
         public new void SetConcurrency<Concurrency>() where Concurrency : IConcurrencyOperations<TObject, TResult, TSearch>, new()
         {
             business.SetConcurrency(new Concurrency());
         }
 
+        public void SetValidationSearch(IValidation<TSearch> validationInstance)
+        {
+            business.SetValidationSearch(validationInstance);
+        }
         public void SetValidationSearch<Validation>() where Validation : IValidation<TSearch>, new()
         {
             business.SetValidationSearch(new Validation());
         }
 
+        void SetPreProcessSelectWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> processSelectInstance)
+        {
+            business.SetPreProcessSelectSearch(processSelectInstance);
+        }
         public void SetPreProcessSelectWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPreProcessSelectSearch(new BusinessProcess());
         }
-
+        public void SetPostProcessSelectWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> businessProcessSelectInstance)
+        {
+            business.SetPostProcessSelectSearch(businessProcessSelectInstance);
+        }
         public void SetPostProcessSelectWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPostProcessSelectSearch(new BusinessProcess());
         }
 
+        public void SetPreProcessDeleteWithSearch( BusinessProcessDelete<TObject, TResult, TSearch> processDeleteInstance)
+        {
+            business.SetPreProcessDeleteSearch(processDeleteInstance);
+        }
         public void SetPreProcessDeleteWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TResult, TSearch>, new()
         {
             business.SetPreProcessDeleteSearch(new BusinessProcess());
         }
-
+        public void SetPostProcessDeleteWithSearch(BusinessProcessDelete<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPostProcessDeleteSearch(processInstance);
+        }
         public void SetPostProcessDeleteWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TResult, TSearch>, new()
         {
             business.SetPostProcessDeleteSearch(new BusinessProcess());
         }
-
+        public void SetPreProcessEditWithSearch( BusinessProcessSelect<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPreProcessEditSearch(processInstance);
+        }
         public void SetPreProcessEditWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPreProcessEditSearch(new BusinessProcess());
         }
-
+        public void SetPostProcessEditWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPostProcessEditSearch(processInstance);
+        }
         public void SetPostProcessEditWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPostProcessEditSearch(new BusinessProcess());

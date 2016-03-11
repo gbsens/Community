@@ -218,7 +218,7 @@ namespace MKS.Core.Business
             DoTracking(CA_CODE.CA_SET_PROCESS,CA_CODE.CA_PROCESS_VALIDATION,"Object",validationInstance.GetType().FullName);
             validationObject = validationInstance;
         }
-
+        
         public void SetPreProcessAdd<TObject>(BusinessProcessAdd<TObject> businessProcessAddInstance)
         {
             Type g=typeof(TObject);

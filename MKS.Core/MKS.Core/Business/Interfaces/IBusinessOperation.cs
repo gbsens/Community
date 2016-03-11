@@ -181,7 +181,7 @@ namespace MKS.Core.Business.Interfaces
     {
         TObject DoMappingSelect(BusinessObjectSelect<TObject, TKey> businessObject);
 
-        void SePreProcessWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new();
+        void SetPreProcessWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new();
 
         void SetPostProcessEditWithKey<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TKey>, new();
 

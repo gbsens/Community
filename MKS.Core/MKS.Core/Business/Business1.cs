@@ -33,107 +33,166 @@ namespace MKS.Core.Business
             
         }
         #region Set
-
+        public void SetTracking(ITrackingAdapter trackingInstance)
+        {
+            business.SetTracking(trackingInstance);
+        }
         public void SetTracking<TTrackingAdapter>() where TTrackingAdapter : ITrackingAdapter, new()
         {
             business.SetTracking(new TTrackingAdapter());
         }
-
+        public void SetDataMap(IDataOperations<TObject> dataOperatorInstance )
+        {
+            business.SetDataMap(dataOperatorInstance);
+        }
         public void SetDataMap<Mapping>() where Mapping : IDataOperations<TObject>, new()
         {
             business.SetDataMap(new Mapping());
         }
-
+        public void SetActivityLog(IActivityLogOperations<TObject> activityInstance, IActivityAdapter activityAdapterInstance)
+        {
+            business.SetEventLog(activityInstance, activityAdapterInstance);
+        }
         public void SetActivityLog<EventLog>() where EventLog : IActivityLogOperations<TObject>, IActivityAdapter, new()
         {
             business.SetEventLog(new EventLog(), new EventLog());
         }
-
         public void SetActivityLog<EventLog>(IActivity activityInstance) where EventLog : IActivityLogOperations<TObject>, IActivityAdapter, new()
         {
             business.SetEventLog(new EventLog(), new EventLog(), activityInstance);
         }
-
+        public void SetConcurrency(IConcurrencyOperations<TObject> concurrencyInstance)
+        {
+            business.SetConcurrency(concurrencyInstance);
+        }
         public void SetConcurrency<Concurrency>() where Concurrency : IConcurrencyOperations<TObject>, new()
         {
             business.SetConcurrency(new Concurrency());
         }
-
+        public void SetSecurity(ISecurityPermission securityPermission, ISecurityAdapter securityAdapter)
+        {
+            business.SetSecurity(securityPermission, securityAdapter);
+        }
         public void SetSecurity<Security>() where Security : ISecurityPermission, ISecurityAdapter, new()
         {
             business.SetSecurity(new Security(), new Security());
         }
-
+        public void SetConfiguration(IConfiguration configurationInstance)
+        {
+            business.SetConfiguration(configurationInstance);
+        }
         public void SetConfiguration<Configuration>() where Configuration : IConfiguration, new()
         {
             business.SetConfiguration(new Configuration());
         }
-
+        public void SetValidation(IValidation<TObject> validationInstance)
+        {
+            business.SetValidation(validationInstance);
+        }
         public void SetValidation<Validation>() where Validation : IValidation<TObject>, new()
         {
             business.SetValidation(new Validation());
         }
-
+        public void SetValidationObject(IValidation<TObject> validaitonInstance)
+        {
+            business.SetValidationObject(validaitonInstance);
+        }
         public void SetValidationObject<Validation>() where Validation : IValidation<TObject>, new()
         {
             business.SetValidationObject(new Validation());
         }
-
+        public void SetDetectChange(IChangeDetection<TObject> changeDetectionInstance)
+        {
+            business.SetDetectChange(changeDetectionInstance);
+        }
         public void SetDetectChange<DetectChange>() where DetectChange : IChangeDetection<TObject>, new()
         {
             business.SetDetectChange(new DetectChange());
         }
-
+        public void SetProcessError(BusinessProcessError businessProcessErrorInstance)
+        {
+            business.SetProcessError(businessProcessErrorInstance);
+        }
         public void SetProcessError<BusinessProcess>() where BusinessProcess : BusinessProcessError, new()
         {
             business.SetProcessError(new BusinessProcess());
         }
-
+        public void SetPreProcessAdd(BusinessProcessAdd<TObject> businessProcessAdd)
+        {
+            business.SetPreProcessAdd(businessProcessAdd);
+        }
         public void SetPreProcessAdd<BusinessProcess>() where BusinessProcess : BusinessProcessAdd<TObject>, new()
         {
             business.SetPreProcessAdd(new BusinessProcess());
         }
-
+        public void SetPostProcessAdd(BusinessProcessAdd<TObject> businessProcessAddInstance)
+        {
+            business.SetPostProcessAdd(businessProcessAddInstance);
+        }
         public void SetPostProcessAdd<BusinessProcess>() where BusinessProcess : BusinessProcessAdd<TObject>, new()
         {
             business.SetPostProcessAdd(new BusinessProcess());
         }
-
+        public void SetPreProcessUpdate(BusinessProcessUpdate<TObject> businessProcessUpdateInstance)
+        {
+            business.SetProcessUpdateBefore(businessProcessUpdateInstance);
+        }
         public void SetPreProcessUpdate<BusinessProcess>() where BusinessProcess : BusinessProcessUpdate<TObject>, new()
         {
             business.SetProcessUpdateBefore(new BusinessProcess());
         }
-
+        public void SetPostProcessUpdate(BusinessProcessUpdate<TObject> businessProcessInstance) 
+        {
+            business.SetPostProcessUpdate(businessProcessInstance);
+        }
         public void SetPostProcessUpdate<BusinessProcess>() where BusinessProcess : BusinessProcessUpdate<TObject>, new()
         {
             business.SetPostProcessUpdate(new BusinessProcess());
         }
-
+        public void SetPreProcessSelect(BusinessProcessSelect<TObject> businessProcessInstance)
+        {
+            business.SetPreProcessSelect(businessProcessInstance);
+        }
         public void SetPreProcessSelect<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject>, new()
         {
             business.SetPreProcessSelect(new BusinessProcess());
         }
-
+        public void SetPostProcessSelect(BusinessProcessSelect<TObject> businessProcessInstance)
+        {
+            business.SetPostProcessSelect(businessProcessInstance);
+        }
         public void SetPostProcessSelect<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject>, new()
         {
             business.SetPostProcessSelect(new BusinessProcess());
         }
-
+        public void SetPreProcessDelete(BusinessProcessDelete<TObject> businessProcessInstance) 
+        {
+            business.SetPreProcessDelete(businessProcessInstance);
+        }
         public void SetPreProcessDelete<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject>, new()
         {
             business.SetPreProcessDelete(new BusinessProcess());
         }
-
+        public void SetPostProcessDelete(BusinessProcessDelete<TObject> businessProcessInstance)
+        {
+            business.SetPostProcessDelete(businessProcessInstance);
+        }
         public void SetPostProcessDelete<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject>, new()
         {
             business.SetPostProcessDelete(new BusinessProcess());
         }
-
+        public void SetPreProcessEdit(BusinessProcessSelect<TObject> businessProcessInstance) 
+        {
+            business.SetPreProcessEdit(businessProcessInstance);
+        }
         public void SetPreProcessEdit<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject>, new()
         {
             business.SetPreProcessEdit(new BusinessProcess());
         }
-
+        public void SetPostProcessEdit(BusinessProcessSelect<TObject> businessProcessSelectInstance) 
+        {
+            business.SetPostProcessEdit(businessProcessSelectInstance);
+        }
         public void SetPostProcessEdit<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject>, new()
         {
             business.SetPostProcessEdit(new BusinessProcess());

@@ -33,43 +33,21 @@ namespace MKS.Core.Business
         }
         #region Set
 
-        public void SetTracking<TTrackingAdapter>() where TTrackingAdapter : ITrackingAdapter, new()
+        public void SetDataMap(IDataOperations<TObject, TResult, TSearch, TKey> mappingInsance)
         {
-            business.SetTracking(new TTrackingAdapter());
-        }
-        /// <summary>
-        /// Cette fonction permet l'injection de dépendence
-        /// </summary>
-        /// <typeparam name="TTrackingAdapter">Type de la classe de tracing</typeparam>
-        /// <param name="instance">Instance de la classe tracking</param>
-        public void SetTracking<TTrackingAdapter>(TTrackingAdapter instance) where TTrackingAdapter : ITrackingAdapter
-        {
-            business.SetTracking(instance);
+            business.SetDataMap(mappingInsance);
         }
         public new void SetDataMap<Mapping>() where Mapping : IDataOperations<TObject, TResult, TSearch, TKey>, new()
         {
             business.SetDataMap(new Mapping());
         }
-        /// <summary>
-        /// Cette fonction permet l'injection de dépendence
-        /// </summary>
-        /// <typeparam name="Mapping">Type du mapping</typeparam>
-        /// <param name="insanceMapping">instance du mapping</param>
-        public void SetDataMap<Mapping>(Mapping insanceMapping) where Mapping : IDataOperations<TObject, TResult, TSearch, TKey>
-        {
-            business.SetDataMap(insanceMapping);
-        }
 
-        public new void SetActivityLog<EventLog>(EventLog instance, IActivityAdapter adapter) 
-            where EventLog : IActivityLogOperations<TObject, TResult, TSearch, TKey>            
+
+        public void SetActivityLog(IActivityLogOperations<TObject, TResult, TSearch, TKey> instance, IActivityAdapter adapter)     
         {
             business.SetEventLog(instance, adapter);
         }
-        public new void SetActivityLog<EventLog>(IActivityAdapter adapter)
-        where EventLog : IActivityLogOperations<TObject, TResult, TSearch, TKey>, new()
-        {
-            business.SetEventLog(new EventLog(), adapter);
-        }
+
         public new void SetActivityLog<EventLog>() where EventLog : IActivityLogOperations<TObject, TResult, TSearch, TKey>, IActivityAdapter, new()
         {
             business.SetEventLog(new EventLog(), new EventLog());
@@ -84,7 +62,7 @@ namespace MKS.Core.Business
             business.SetEventLog(new TActivityLog(), new TActivityLog(), activityInstance);
         }
 
-        public void SetActivityLog<TEventLog, TEventLogAdapter>()
+        public new void SetActivityLog<TEventLog, TEventLogAdapter>()
             where TEventLog : IActivityLogOperations<TObject, TResult, TSearch, TKey>, new()
             where TEventLogAdapter : IActivityAdapter, new()
         {
@@ -97,12 +75,13 @@ namespace MKS.Core.Business
         {
             business.SetEventLog(activityInstance, new TEventLogAdapter());
         }
+
         /// <summary>
         /// Cette fonction permet l'injection de dépendance pour la gestion des concurrences
         /// </summary>
         /// <typeparam name="Concurrency">Type de classe de concurrence</typeparam>
         /// <param name="instance">Instance de la concurrence</param>
-        public void SetConcurrency<Concurrency>(Concurrency instance) where Concurrency : IConcurrencyOperations<TObject, TResult, TSearch, TKey>
+        public void SetConcurrency(IConcurrencyOperations<TObject, TResult, TSearch, TKey> instance) 
         {
             business.SetConcurrency(instance);
         }
@@ -111,36 +90,65 @@ namespace MKS.Core.Business
             business.SetConcurrency(new Concurrency());
         }
 
-        public void SetValidationSearch<Validation>() where Validation : IValidation<TSearch>, new()
+        public void SetValidationSearch(IValidation<TSearch> validationInstance)
+        {
+            business.SetValidationSearch(validationInstance);
+        }
+        public  void SetValidationSearch<Validation>() where Validation : IValidation<TSearch>, new()
         {
             business.SetValidationSearch(new Validation());
         }
 
-        public void SetPreProcessSelectWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
+        public  void SetPreProcessSelectWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPreProcessSelectSearch(processInstance);
+        }
+        public  void SetPreProcessSelectWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPreProcessSelectSearch(new BusinessProcess());
         }
 
-        public void SetPostProcessSelectWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
+        public void SetPostProcessSelectWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPostProcessSelectSearch(processInstance);
+        }
+        public  void SetPostProcessSelectWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPostProcessSelectSearch(new BusinessProcess());
         }
 
-        public void SetPreProcessDeleteWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TResult, TSearch>, new()
+        public void SetPreProcessDeleteWithSearch(BusinessProcessDelete<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPreProcessDeleteSearch(processInstance);
+        }
+        public   void SetPreProcessDeleteWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TResult, TSearch>, new()
         {
             business.SetPreProcessDeleteSearch(new BusinessProcess());
         }
 
-        public void SetPostProcessDeleteWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TResult, TSearch>, new()
+        public void SetPostProcessDelteWithSearch(BusinessProcessDelete<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPostProcessDeleteSearch(processInstance);
+        }
+        public  void SetPostProcessDeleteWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessDelete<TObject, TResult, TSearch>, new()
         {
             business.SetPostProcessDeleteSearch(new BusinessProcess());
         }
 
-        public void SetProcessEditBeforeWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
+        public void SetProcessEditBeforeWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPreProcessEditSearch(processInstance);
+        }
+        public   void SetProcessEditBeforeWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPreProcessEditSearch(new BusinessProcess());
         }
 
+        public void SetProcessEditAfterWithSearch(BusinessProcessSelect<TObject, TResult, TSearch> processInstance)
+        {
+            business.SetPostProcessEditSearch(processInstance);
+
+        }
         public void SetProcessEditAfterWithSearch<BusinessProcess>() where BusinessProcess : BusinessProcessSelect<TObject, TResult, TSearch>, new()
         {
             business.SetPostProcessEditSearch(new BusinessProcess());
