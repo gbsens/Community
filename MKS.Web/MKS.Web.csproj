@@ -59,6 +59,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="JsonUtility.cs" />
+    <Compile Include="MasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Page.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
