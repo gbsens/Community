@@ -71,6 +71,7 @@
     <Compile Include="Business\Interfaces\IBusinessOperations.cs" />
     <Compile Include="Business\Interfaces\IBusinessObject.cs" />
     <Compile Include="Business\Interfaces\IBusinessProcess.cs" />
+    <Compile Include="Business\MKSBusiness.cs" />
     <Compile Include="Business\RuleBusiness.cs" />
     <Compile Include="Configuration\Configuration.cs" />
     <Compile Include="Configuration\IConfiguration.cs" />
