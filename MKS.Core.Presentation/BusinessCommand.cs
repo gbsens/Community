@@ -15,7 +15,7 @@ namespace MKS.Core.Presenter
         where TProcess:IOperation<TView>
     {
         public BusinessCommand():base(false)
-        {
+        { 
             
             SetProcessExecute<BusinessProcessCommand<TView, TProcess>>();
             SetProcessError<BusinessError>();

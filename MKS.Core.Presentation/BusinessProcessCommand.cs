@@ -179,10 +179,13 @@ namespace MKS.Core.Presenter
             }
             else if(pex!=null && exr==null)
             {
+                MKS.Library.ErrorLog.PublishExceptionMessage(exr, Globals.GetUserEnvironment);
+
                 string msg=pex.Message;
                 if (pex.InnerException!=null)
                     msg=msg+pex.InnerException.Message;
                 ProcessInstance.ShowMessage("Erreur non géré", msg, Severity.Error);
+                
             }
                 
 

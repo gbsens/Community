@@ -112,6 +112,8 @@ namespace MKS.Core
             var sysCode = _userenvironnement.GetCurrentSystemCode();
             if (sysCode == null)
                 sysCode= ConfigurationManager.AppSettings["CodeSysteme"];
+            if (sysCode == null)
+                sysCode = "MKS";
             return sysCode;
         }
 
