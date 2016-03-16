@@ -179,7 +179,7 @@ namespace MKS.Core.Presenter
             }
             else if(pex!=null && exr==null)
             {
-                MKS.Library.ErrorLog.PublishExceptionMessage(exr, Globals.GetUserEnvironment);
+                MKS.Library.ErrorLog.PublishExceptionMessage(pex, Globals.GetUserEnvironment);
 
                 string msg=pex.Message;
                 if (pex.InnerException!=null)
