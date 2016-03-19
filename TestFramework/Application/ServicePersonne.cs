@@ -21,5 +21,13 @@ namespace TestFramework.Application
 
             return b.Add(personne);
         }
+        public List<Personne> SelectList(SearchPersonne searchp)
+        {
+            MKSBusiness<Personne, List<Personne>, SearchPersonne> b = new MKSBusiness<Personne, List<Personne>, SearchPersonne>();
+            b.SetValidationSearch(new ValidationSearchPersonne());
+
+
+            return b.Select(searchp);
+        }
     }
 }

@@ -51,18 +51,32 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Application\BusinessPersonne1.cs" />
+    <Compile Include="Application\FormPersonne.cs" />
+    <Compile Include="Application\IVuePersonne.cs" />
+    <Compile Include="Application\KeyPersonne.cs" />
+    <Compile Include="Application\PresenterPersonne.cs" />
+    <Compile Include="Application\PresenterPersonneProcess.cs" />
     <Compile Include="Application\ProcessAddPersonne.cs" />
+    <Compile Include="Application\SearchPersonne.cs" />
     <Compile Include="Application\ServicePersonne.cs" />
+    <Compile Include="Application\ValidationSearch.cs" />
     <Compile Include="Application\Validation.cs" />
     <Compile Include="InjectionDependance.cs" />
     <Compile Include="Application\Personne.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ErrorLog.cs" />
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MKS.Core.Model\MKS.Core.Model.csproj">
       <Project>{40616318-3637-4058-af61-40ba3c38b329}</Project>
       <Name>MKS.Core.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MKS.Core.Presentation\MKS.Core.Presenter.csproj">
+      <Project>{cac768f4-e6b0-490f-9a10-b7943305adc6}</Project>
+      <Name>MKS.Core.Presenter</Name>
     </ProjectReference>
     <ProjectReference Include="..\MKS.Core\MKS.Core\MKS.Core.csproj">
       <Project>{20ef1de7-f9a8-4f64-a579-6352873399da}</Project>
