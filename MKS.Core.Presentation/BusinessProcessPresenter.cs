@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using MKS.Core.Business;
 using MKS.Core.Presenter;
 using MKS.Core.Presenter.Interfaces;
+using System.ServiceModel;
+using MKS.Core.Model.Error;
 
 
 namespace MKS.Core.Presenter
@@ -34,9 +36,21 @@ namespace MKS.Core.Presenter
             switch (rule.CodeMessage)
             {
                 case "ERR_PRES_INIT":
-                    proc.Initialisation(true,businessObject.Parameter.GetView, businessObject.Parameter.Presenter);
-                    businessObject.Parameter.Process = proc;        
+                    try
+                    {
+                        proc.Initialisation(true, businessObject.Parameter.GetView, businessObject.Parameter.Presenter);
+                        businessObject.Parameter.Process = proc;
+                    }
+                     catch (Exception ex)
+                    {
+
+                        Utile.DiscriminationError<TView>(ex, proc, businessObject.Parameter.GetView);
+
+                        return Process.SuccessAddMessage;
+                    }
+                    
                     break;
+
 
             }
 
@@ -69,8 +83,18 @@ namespace MKS.Core.Presenter
             switch (rule.CodeMessage)
             {
                 case "ERR_PRES":
-                    proc.Initialisation(false,businessObject.Parameter.GetView, businessObject.Parameter.Presenter);
-                    businessObject.Parameter.Process = proc;
+                    try
+                    {
+                        proc.Initialisation(false, businessObject.Parameter.GetView, businessObject.Parameter.Presenter);
+                        businessObject.Parameter.Process = proc;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Utile.DiscriminationError<TView>(ex, proc, businessObject.Parameter.GetView);
+
+                        return Process.SuccessAddMessage;
+                    }
                     break;
 
             }
@@ -79,5 +103,8 @@ namespace MKS.Core.Presenter
 
             return Process.Succeed;
         }
+        
+
     }
+        
 }

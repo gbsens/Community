@@ -58,6 +58,7 @@
     <Compile Include="ObjectProcess.cs" />
     <Compile Include="Presenter.cs" />
     <Compile Include="Process.cs" />
+    <Compile Include="Utile.cs" />
     <Compile Include="ValidationView.cs" />
   </ItemGroup>
   <ItemGroup>
