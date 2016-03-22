@@ -76,7 +76,7 @@ namespace MKS.Core
                                 }
                                 else
                                 {
-                                    if (type.GetInterface(pluginType.FullName) != null)
+                                    if (pluginType.IsAssignableFrom(type))
                                     {
                                         pluginTypes.Add(type);
                                     }
