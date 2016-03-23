@@ -21,7 +21,7 @@ namespace MKS.Library
         public const string LIBELLE_SOURCE_EXCEPTION = "Source : ";
         public const string LIBELLE_SEVERITE_EXCEPTION = "Sévérité : {0}";
         public const string DEFAULT_SYSTEM_CODE = "MKS";
-        public const string ASPNET_SOURCE = "ASP.NET 4.5";
+        public const string ASPNET_SOURCE = ".NET Framework MakeSens";
 
         public static string _clientSystemCode;
         public static string _clientUserName;
