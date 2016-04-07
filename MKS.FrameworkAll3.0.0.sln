@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Core", "MKS.Core\MKS.Core\MKS.Core.csproj", "{20EF1DE7-F9A8-4F64-A579-6352873399DA}"
 EndProject
@@ -23,8 +23,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Core.Presenter", "MKS.Core.Presentation\MKS.Core.Presenter.csproj", "{CAC768F4-E6B0-490F-9A10-B7943305ADC6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Presenter.Model", "MKS.Presenter.Model\MKS.Presenter.Model.csproj", "{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MKS.Web.MVC", "MKS.Web.MVC\MKS.Web.MVC.csproj", "{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,15 +88,6 @@ Global
 		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
 		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
 		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.Release|x64.ActiveCfg = Release|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.ReleaseX64|Any CPU.ActiveCfg = Release|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.ReleaseX64|Any CPU.Build.0 = Release|Any CPU
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070}.ReleaseX64|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,7 +100,6 @@ Global
 		{40616318-3637-4058-AF61-40BA3C38B329} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
 		{CAC768F4-E6B0-490F-9A10-B7943305ADC6} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
 		{93687E92-5E3A-4D76-9564-D3AEE83E0F8D} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
-		{4AACE8F9-5BE6-41A3-A7E5-4582653C6070} = {B8EF7756-C563-451F-B65A-7B112D039A1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45
