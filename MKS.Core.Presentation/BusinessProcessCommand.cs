@@ -51,7 +51,7 @@ namespace MKS.Core.Presenter
                         
                         return Process.SuccessAddMessage;
                     }
-                    break;
+                   
                 case "ERR_CMD_SHOW":
                     bool isError = false;
                     if (businessObject.Parameter.GetView.ViewLogics.BusinessMessages != null)
